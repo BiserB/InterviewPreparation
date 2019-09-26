@@ -8,7 +8,7 @@ namespace ArrayExercises
 
     public class ReversePrinter: IArrayTask
     {
-        public string Message => "displays all the elements of the array in reverse order";
+        public string ResultMessage => "The elements of the array in reverse order:";
         
         public void Run(int[] arr)
         {
@@ -19,5 +19,6 @@ namespace ArrayExercises
                 Console.WriteLine(arr[i]);
             }
         }
+
     }
 }

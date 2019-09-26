@@ -6,12 +6,16 @@ namespace ArrayExercises
     {
         static void Main(string[] args)
         {
-            IArrayTask currentTask = new ReversePrinter();
-
             Console.WriteLine("Started...");
-            Console.WriteLine($"Program which {currentTask.Message}.");
+
+            // IArrayTask currentTask = new ReversePrinter();
+            // IArrayTask currentTask = new AllElementsAccumulator();
+            // IArrayTask currentTask = new ArrayDuplicator();
+             IArrayTask currentTask = new DuplicateCounter();
 
             int[] arr = CreateArray();
+
+            Console.WriteLine(currentTask.ResultMessage);
 
             currentTask.Run(arr);
 

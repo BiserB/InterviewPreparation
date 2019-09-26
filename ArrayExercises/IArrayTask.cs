@@ -6,7 +6,7 @@ namespace ArrayExercises
 {
     interface IArrayTask
     {
-        string Message { get; }
+        string ResultMessage { get; }
 
         void Run(int[] arr);
     }
