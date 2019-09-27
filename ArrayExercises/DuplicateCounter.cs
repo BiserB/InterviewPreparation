@@ -6,10 +6,11 @@ namespace ArrayExercises
 {
     public class DuplicateCounter : IArrayTask
     {
-        public string ResultMessage => "Count of duplicate elements:";
+        private const string ResultMessage = "Count of duplicate elements: ";
 
-        public void Run(int[] arr)
+        public string Run()
         {
+            int[] arr = Program.CreateArray();
             List<int> duplicates = new List<int>();
 
             for (int i = 0; i < arr.Length - 1; i++)
@@ -33,7 +34,7 @@ namespace ArrayExercises
                 }
             }
 
-            Console.WriteLine(duplicates.Count);
+            return ResultMessage + duplicates.Count;
         }
     }
 }

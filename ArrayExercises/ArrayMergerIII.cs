@@ -3,21 +3,24 @@ using System.Collections.Generic;
 
 namespace ArrayExercises
 {
-    public class ArrayMergerIII
+    public class ArrayMergerIII : IArrayTask
     {
-        public string ResultMessage => "The merged array in ascending order:";
+        private const string ResultMessage = "The merged array in ascending order: ";
 
-        public void Run(int[] arr, int[] arr2)
+        public string Run()
         {
+            int[] arr = Program.CreateArray();
+            int[] arr2 = Program.CreateArray();
+
             int[] merged = new int[arr.Length + arr2.Length];
 
             Array.Copy(arr, merged, arr.Length);
 
             Array.Copy(arr2, 0, merged, arr.Length, arr2.Length);
 
-            ArraySorter.Sort(merged);
+            ArraySorter.SortAsc(merged);
 
-            Console.WriteLine(String.Join(", ", merged));
+            return ResultMessage + String.Join(", ", merged);
         }
     }
 }

@@ -3,40 +3,57 @@
 namespace ArrayExercises
 {
     class Program
-    {
+    {        
         static void Main(string[] args)
         {
             Console.WriteLine("Started...");
-
+            
+            /*** Uncomment some of the following lines to run specific task ***/
             // IArrayTask currentTask = new ReversePrinter();
             // IArrayTask currentTask = new AllElementsAccumulator();
             // IArrayTask currentTask = new ArrayDuplicator();
             // IArrayTask currentTask = new DuplicateCounter();
             // IArrayTask currentTask = new UniquePrinter();
-            // ArrayMerger currentTask = new ArrayMerger();
-            // ArrayMergerII currentTask = new ArrayMergerII();
-             ArrayMergerIII currentTask = new ArrayMergerIII();
+            // IArrayTask currentTask = new ArrayMerger();
+            // IArrayTask currentTask = new ArrayMergerII();
+            // IArrayTask currentTask = new ArrayMergerIII();
             // IArrayTask currentTask = new FrequencyCounter();
+            // IArrayTask currentTask = new MinMaxFinder();
+            // IArrayTask currentTask = new OddEvenSeparator();
+            // IArrayTask currentTask = new ValueInserter();
+            // IArrayTask currentTask = new ElementEraser();
+             IArrayTask currentTask = new SecondLargest();
+            
+            string result = currentTask.Run();
 
-            int[] arr = CreateArray();
-            int[] arr2 = CreateArray();
-
-            Console.WriteLine(currentTask.ResultMessage);
-
-            currentTask.Run(arr, arr2);
+            Console.WriteLine(result);
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
 
-        static int[] CreateArray()
+        public static int GetValue()
         {
-            Console.WriteLine("Enter number of array elements:");
+            Console.WriteLine("Enter value to be inserted: ");
+
+            return int.Parse(Console.ReadLine());
+        }
+
+        public static int GetPosition()
+        {
+            Console.WriteLine("Enter position to be deleted: ");
+
+            return int.Parse(Console.ReadLine());
+        }
+
+        public static int[] CreateArray()
+        {
+            Console.WriteLine("Enter size of array:");
 
             int n = int.Parse(Console.ReadLine());
             int[] arr = new int[n];
 
-            Console.WriteLine("Elements on new line:");
+            Console.WriteLine("Enter every element on new line:");
 
             for (int i = 0; i < n; i++)
             {

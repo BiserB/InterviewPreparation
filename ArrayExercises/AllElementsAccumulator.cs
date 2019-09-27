@@ -9,10 +9,12 @@ namespace ArrayExercises
 
     public class AllElementsAccumulator: IArrayTask
     {
-        public string ResultMessage => "The sum of the array elements:";
+        private const string ResultMessage = "The sum of the array elements: ";
         
-        public void Run(int[] arr)
+        public string Run()
         {
+            int[] arr = Program.CreateArray();
+
             long result = 0;
 
             for (int i = 0; i < arr.Length; i++)
@@ -20,12 +22,7 @@ namespace ArrayExercises
                 result += arr[i];
             }
 
-            Console.WriteLine(result);
-        }
-
-        public void Run(int[] arr, int[] arr2 = null)
-        {
-            throw new NotImplementedException();
+            return ResultMessage + result;
         }
     }
 }

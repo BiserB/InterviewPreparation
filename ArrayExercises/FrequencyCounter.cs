@@ -7,10 +7,12 @@ namespace ArrayExercises
 {
     public class FrequencyCounter : IArrayTask
     {
-        public string ResultMessage => "Frequency of each element of the array:";
+        private const string ResultMessage = "Frequency of each element of the array: ";
 
-        public void Run(int[] arr)
+        public string Run()
         {
+            int[] arr = Program.CreateArray();
+
             Dictionary<int, int> frequencies = new Dictionary<int, int>();
 
             foreach (var element in arr)
@@ -28,8 +30,7 @@ namespace ArrayExercises
             string[] keys = frequencies.Keys.Select(k => k.ToString().PadLeft(maxLength)).ToArray();
             string[] values = frequencies.Values.Select(k => k.ToString().PadLeft(maxLength)).ToArray();
 
-            Console.WriteLine(String.Join(", ", keys));
-            Console.WriteLine(String.Join(", ", values));
+            return ResultMessage + Environment.NewLine + String.Join(", ", keys) + Environment.NewLine + String.Join(", ", values);
         }
     }
 }

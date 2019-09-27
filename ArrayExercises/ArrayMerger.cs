@@ -7,12 +7,15 @@ namespace ArrayExercises
 {
     // Write a program in C# Sharp to merge two arrays of same size sorted in ascending order.
 
-    public class ArrayMerger
+    public class ArrayMerger : IArrayTask
     {
-        public string ResultMessage => "The merged array in ascending order:";
+        private const string ResultMessage = "The merged array in ascending order:";
 
-        public void Run(int[] arr, int[] arr2)
+        public string Run()
         {
+            int[] arr = Program.CreateArray();
+            int[] arr2 = Program.CreateArray();
+
             int[] merged = new int[arr.Length + arr2.Length];
 
             Array.Copy(arr, merged, arr.Length);
@@ -20,7 +23,7 @@ namespace ArrayExercises
 
             Array.Sort(merged);
 
-            Console.WriteLine(String.Join(",", merged));
+            return ResultMessage + String.Join(",", merged);
         }
 
     }

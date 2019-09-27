@@ -8,10 +8,12 @@ namespace ArrayExercises
 
     public class UniquePrinter : IArrayTask
     {
-        public string ResultMessage => "The all unique elements in the array:";
+        private const string ResultMessage = "The all unique elements in the array: ";
 
-        public void Run(int[] arr)
+        public string Run()
         {
+            int[] arr = Program.CreateArray();
+
             List<int> duplicates = new List<int>();
             List<int> uniques = new List<int>();
             
@@ -44,7 +46,7 @@ namespace ArrayExercises
                 }
             }
 
-            Console.WriteLine(String.Join(", ", uniques));
+            return ResultMessage + String.Join(", ", uniques);
         }
     }
 }

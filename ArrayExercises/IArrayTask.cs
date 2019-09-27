@@ -4,10 +4,8 @@ using System.Text;
 
 namespace ArrayExercises
 {
-    interface IArrayTask
+    public interface IArrayTask
     {
-        string ResultMessage { get; }
-
-        void Run(int[] arr);
+        string Run();
     }
 }

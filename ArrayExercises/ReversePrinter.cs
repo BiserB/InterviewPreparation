@@ -6,18 +6,30 @@ namespace ArrayExercises
 {
     // Write a program to read n number of values in an array and display it in reverse order.
 
-    public class ReversePrinter: IArrayTask
+    public class ReversePrinter : IArrayTask
     {
-        public string ResultMessage => "The elements of the array in reverse order:";
-        
-        public void Run(int[] arr)
-        {
-            int length = arr.Length;
+        private const string ResultMessage = "The elements of the array in reverse order: ";
 
-            for (int i = length - 1; i >= 0; i--)
+        public string Run()
+        {
+            int[] arr = Program.CreateArray();
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(ResultMessage);
+
+            for (int i = arr.Length - 1; i >= 0; i--)
             {
-                Console.WriteLine(arr[i]);
+                if (i > 0)
+                {
+                    sb.Append($"{arr[i]}, ");
+                }
+                else
+                {
+                    sb.Append(arr[i]);
+                }
             }
+
+            return sb.ToString();
         }
 
     }
