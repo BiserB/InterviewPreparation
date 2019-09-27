@@ -11,13 +11,19 @@ namespace ArrayExercises
             // IArrayTask currentTask = new ReversePrinter();
             // IArrayTask currentTask = new AllElementsAccumulator();
             // IArrayTask currentTask = new ArrayDuplicator();
-             IArrayTask currentTask = new DuplicateCounter();
+            // IArrayTask currentTask = new DuplicateCounter();
+            // IArrayTask currentTask = new UniquePrinter();
+            // ArrayMerger currentTask = new ArrayMerger();
+            // ArrayMergerII currentTask = new ArrayMergerII();
+             ArrayMergerIII currentTask = new ArrayMergerIII();
+            // IArrayTask currentTask = new FrequencyCounter();
 
             int[] arr = CreateArray();
+            int[] arr2 = CreateArray();
 
             Console.WriteLine(currentTask.ResultMessage);
 
-            currentTask.Run(arr);
+            currentTask.Run(arr, arr2);
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();

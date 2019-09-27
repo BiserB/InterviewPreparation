@@ -22,5 +22,10 @@ namespace ArrayExercises
 
             Console.WriteLine(result);
         }
+
+        public void Run(int[] arr, int[] arr2 = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
