@@ -27,11 +27,7 @@ namespace ArrayExercises
 
             string result = currentTask.Run();
 
-            Console.WriteLine(result);
-
-            int i = 0;
-
-            var v = (Int32)i;
+            Console.WriteLine(result);            
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
