@@ -6,6 +6,6 @@ namespace ArrayExercises
 {
     public interface IArrayTask
     {
-        string Run();
+       string Run();
     }
 }

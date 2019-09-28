@@ -3,11 +3,12 @@
 namespace ArrayExercises
 {
     class Program
-    {        
+    {
+
         static void Main(string[] args)
         {
             Console.WriteLine("Started...");
-            
+
             /*** Uncomment some of the following lines to run specific task ***/
             // IArrayTask currentTask = new ReversePrinter();
             // IArrayTask currentTask = new AllElementsAccumulator();
@@ -23,10 +24,14 @@ namespace ArrayExercises
             // IArrayTask currentTask = new ValueInserter();
             // IArrayTask currentTask = new ElementEraser();
              IArrayTask currentTask = new SecondLargest();
-            
+
             string result = currentTask.Run();
 
             Console.WriteLine(result);
+
+            int i = 0;
+
+            var v = (Int32)i;
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
